@@ -54,18 +54,17 @@ will be the key to dynamically creating new types of jobs.
 - Deployment requirements need to be understood for the context of MS infrastructure.
 
 #### Technology Solutions Glossary
-###### Airflow - https://airflow.apache.org/docs/
-
+##### Airflow - https://airflow.apache.org/docs/
 Airflow is a framework for managing, scheduling and monitoring workflows. It can use a variety of backends,
 including support for Kubernetes clusters to scale and isolate work.
 ---
-###### Celery - https://docs.celeryq.dev/
 
+##### Celery - https://docs.celeryq.dev/
 Celery is a distributed task queue. Scheduling and orchestration are best handled using
 a DB backed Scheduler or a framework.
 ---
-###### Celery Worker - https://docs.celeryq.dev/en/stable/userguide/workers.html
 
+##### Celery Worker - https://docs.celeryq.dev/en/stable/userguide/workers.html
 The Worker handles Tasks from the Celery application, as received from the Broker
 ---
 ###### Redis as Celery Broker - https://docs.celeryq.dev/en/stable/getting-started/backends-and-brokers/index.html#redis
