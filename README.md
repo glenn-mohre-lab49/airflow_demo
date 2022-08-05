@@ -1,6 +1,4 @@
-### Comparing Job Scheduling Implementation Solutions
 #### Airflow + Celery + Redis https://github.com/glenn-mohre-lab49/airflow_demo
-##### Apache Airflow 
 
 The demo implementation is encapsulated in a Docker container. The need for this
 should reflect the heavier infrastructure requirements for this piece of kit.
@@ -14,22 +12,23 @@ These files must be in the path defined by the configuration variable [dags_fold
 
 #### MVP Requirements
 
-##### Schedule a job and be notified when it completes
+#### Schedule a job and be notified when it completes
 
 The Airflow [Scheduler](https://airflow.apache.org/docs/apache-airflow/stable/concepts/scheduler.html)
 is the service which provides this functionality.
 ---
-##### Have my job be handled by an agent from a pool
+#### Have my job be handled by an agent from a pool
 
 The demo implementation uses a Celery as the [Executor](https://airflow.apache.org/docs/apache-airflow/stable/executor/index.html) of the task.
 Configuration of Celery includes [configuration](https://docs.celeryq.dev/en/3.1/configuration.html#celeryd-concurrency) for managing the number of concurrent workers.
 ---
-##### Have a UI to monitor active jobs
+#### Have a UI to monitor active jobs
 
 Airflow includes a webserver running a [UI](https://airflow.apache.org/docs/apache-airflow/stable/ui.html)
 It can be used to monitor active jobs.
 ---
-##### Define a job via API so new job types don't require deployments.
+#### Define a job via API so new job types don't require deployments.
+
 This hasn't been solved.
 Understanding the [DagFile Processing](https://airflow.apache.org/docs/apache-airflow/stable/concepts/dagfile-processing.html)
 will be the key to dynamically creating new types of jobs. 
