@@ -1,4 +1,4 @@
-#### Airflow + Celery + Redis https://github.com/glenn-mohre-lab49/airflow_demo
+## Airflow + Celery + Redis https://github.com/glenn-mohre-lab49/airflow_demo
 
 The demo implementation is encapsulated in a Docker container. The need for this
 should reflect the heavier infrastructure requirements for this piece of kit.
