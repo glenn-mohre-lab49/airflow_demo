@@ -1,0 +1,32 @@
+[2022-07-28 20:25:18,350] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: btc_price_operator.process_prices manual__2022-07-28T20:25:16.072153+00:00 [queued]>
+[2022-07-28 20:25:18,363] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: btc_price_operator.process_prices manual__2022-07-28T20:25:16.072153+00:00 [queued]>
+[2022-07-28 20:25:18,364] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-28 20:25:18,364] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2022-07-28 20:25:18,364] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-28 20:25:18,383] {taskinstance.py:1262} INFO - Executing <Task(_PythonDecoratedOperator): process_prices> on 2022-07-28 20:25:16.072153+00:00
+[2022-07-28 20:25:18,388] {standard_task_runner.py:52} INFO - Started process 82 to run task
+[2022-07-28 20:25:18,394] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'btc_price_operator', 'process_prices', 'manual__2022-07-28T20:25:16.072153+00:00', '--job-id', '143', '--raw', '--subdir', 'DAGS_FOLDER/btc_price.py', '--cfg-path', '/tmp/tmpdf_dc4k6', '--error-file', '/tmp/tmpmv2gaz6t']
+[2022-07-28 20:25:18,395] {standard_task_runner.py:77} INFO - Job 143: Subtask process_prices
+[2022-07-28 20:25:18,454] {logging_mixin.py:109} INFO - Running <TaskInstance: btc_price_operator.process_prices manual__2022-07-28T20:25:16.072153+00:00 [running]> on host aeed186f5814
+[2022-07-28 20:25:18,532] {taskinstance.py:1429} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=btc_price_operator
+AIRFLOW_CTX_TASK_ID=process_prices
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-28T20:25:16.072153+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-07-28T20:25:16.072153+00:00
+[2022-07-28 20:25:18,533] {python.py:152} INFO - Done. Returned value was: {"prices": [{"currency": "USD", "rate": 23840.5947, "price_date": "2022-07-28 20:25:16.855493"}, {"currency": "GBP", "rate": 19921.0102, "price_date": "2022-07-28 20:25:16.855493"}, {"currency": "EUR", "rate": 23224.22, "price_date": "2022-07-28 20:25:16.855493"}]}
+[2022-07-28 20:25:18,571] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=btc_price_operator, task_id=process_prices, execution_date=20220728T202516, start_date=20220728T202518, end_date=20220728T202518
+[2022-07-28 20:25:18,605] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-07-28 20:25:18,634] {baseoperator.py:1386} WARNING - Dependency <Task(_PythonDecoratedOperator): compose_price_email>, send_price_email already registered for DAG: btc_price_operator
+[2022-07-28 20:25:18,634] {baseoperator.py:1386} WARNING - Dependency <Task(EmailOperator): send_price_email>, compose_price_email already registered for DAG: btc_price_operator
+[2022-07-28 20:25:18,634] {baseoperator.py:1386} WARNING - Dependency <Task(_PythonDecoratedOperator): compose_price_email>, send_price_email already registered for DAG: btc_price_operator
+[2022-07-28 20:25:18,634] {baseoperator.py:1386} WARNING - Dependency <Task(EmailOperator): send_price_email>, compose_price_email already registered for DAG: btc_price_operator
+[2022-07-28 20:25:18,634] {baseoperator.py:1386} WARNING - Dependency <Task(_PythonDecoratedOperator): compose_price_email>, send_price_email already registered for DAG: btc_price_operator
+[2022-07-28 20:25:18,634] {baseoperator.py:1386} WARNING - Dependency <Task(EmailOperator): send_price_email>, compose_price_email already registered for DAG: btc_price_operator
+[2022-07-28 20:25:18,634] {baseoperator.py:1386} WARNING - Dependency <Task(_PythonDecoratedOperator): compose_price_email>, send_price_email already registered for DAG: btc_price_operator
+[2022-07-28 20:25:18,634] {baseoperator.py:1386} WARNING - Dependency <Task(EmailOperator): send_price_email>, compose_price_email already registered for DAG: btc_price_operator
+[2022-07-28 20:25:18,634] {baseoperator.py:1386} WARNING - Dependency <Task(_PythonDecoratedOperator): compose_price_email>, send_price_email already registered for DAG: btc_price_operator
+[2022-07-28 20:25:18,634] {baseoperator.py:1386} WARNING - Dependency <Task(EmailOperator): send_price_email>, compose_price_email already registered for DAG: btc_price_operator
+[2022-07-28 20:25:18,655] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
